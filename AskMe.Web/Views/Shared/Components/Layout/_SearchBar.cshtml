@@ -1,0 +1,23 @@
+﻿@model AskMeSearchViewModel
+
+<header class="masthead">
+    <div class="container position-relative">
+        <div class="row justify-content-center">
+            <div class="col-xl-12">
+                <div class="text-center text-white">
+                    <h1 class="mb-5">Got a Question? Ask Me</h1>
+                    <p class="searchTagLine">Use our AI system to find the answser, be as specific as possible to get higher a quality answer</p>
+                    <form class="form-subscribe" asp-action="SearchResult" asp-controller="AskMe">
+                        <div class="row">
+                            <div class="col">
+                                <input class="form-control form-control-lg" asp-for="Query" type="text" placeholder="Type your search term here"  />
+                                  <span asp-validation-for="Query" class="text-danger"></span>
+                            </div>
+                            <div class="col-auto"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">Submit</button></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

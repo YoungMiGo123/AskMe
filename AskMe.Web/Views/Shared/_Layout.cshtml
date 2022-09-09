@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] AskMe</title>
+   @{
+         await Html.RenderPartialAsync("/Views/Shared/Components/Layout/_Styles.cshtml");
+   }
+</head>
+<body>
+    @{
+         await Html.RenderPartialAsync("/Views/Shared/Components/Layout/_Nav.cshtml");
+         await Html.RenderPartialAsync("/Views/Shared/Components/Layout/_SearchBar.cshtml", new AskMeSearchViewModel());
+    }
+    <div class="container" style="min-height: 40vh;">
+        <main role="main" class="pb-3 pt-5">
+            @RenderBody()
+        </main>
+    </div>
+
+    @{
+        await Html.RenderPartialAsync("/Views/Shared/Components/Layout/_Footer.cshtml", new LeadViewModel() { Email = string.Empty });
+        await Html.RenderPartialAsync("/Views/Shared/Components/Layout/_Scripts.cshtml");
+    }
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

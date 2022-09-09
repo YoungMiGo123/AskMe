@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AskMe.Core\AskMe.Core.csproj" />
+    <ProjectReference Include="..\AskMe.Services\AskMe.Services.csproj" />
+    <ProjectReference Include="..\AskMe.Views\AskMe.Views.csproj" />
+  </ItemGroup>
+
+</Project>
